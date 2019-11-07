@@ -4,21 +4,43 @@
 	"scopeName": "source.q",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"comment": "Keywords",
+			"name": "keyword.control.q",
+			"match": "\\b(if|while|for|return)\\b"
+		},
+		{
+			"comment": "Built-in functions",
+			"match": "\\b(syscall)\\b",
+			"name": "support.function.builtin.q"
+		},
+		{
+			"comment": "Function definitions",
+			"match": "^([a-zA-Z0-9]+)\\(",
+			"captures": {
+				"1": {
+					"name": "entity.name.function"
+				}
+			}
+		},
+		{
+			"comment": "Function calls",
+			"match": "\\b([a-zA-Z0-9]+)\\(",
+			"captures": {
+				"1": {
+					"name": "entity.name.function"
+				}
+			}
+		},
+		{
+			"comment": "Integers",
+			"name": "constant.numeric.integer.q",
+			"match": "\\b[0-9]+\\b"
 		},
 		{
 			"include": "#strings"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.control.q",
-					"match": "\\b(if|while|for|return)\\b"
-				}
-			]
-		},
 		"strings": {
 			"name": "string.quoted.double.q",
 			"begin": "\"",
