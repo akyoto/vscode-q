@@ -16,10 +16,6 @@
 				{
 					"name": "keyword.control.q",
 					"match": "\\b(if|while|for|return)\\b"
-				},
-				{
-					"name": "keyword.funct",
-					"match": "\\b(func)\\b"
 				}
 			]
 		},
