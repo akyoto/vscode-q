@@ -6,7 +6,7 @@
 		{
 			"comment": "Keywords",
 			"name": "keyword.control.q",
-			"match": "\\b(if|ensure|for|loop|mut|require|return)\\b"
+			"match": "\\b(if|ensure|for|import|loop|mut|require|return)\\b"
 		},
 		{
 			"comment": "Built-in functions",
