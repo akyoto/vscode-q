@@ -83,6 +83,39 @@
 				}
 			},
 			"end": "$"
+		},
+		{
+			"include": "#standard-types"
 		}
-	]
+	],
+	"repository": {
+		"standard-types": {
+			"patterns": [
+				{
+					"name": "storage.type.boolean.q",
+					"match": "\\bBool\\b"
+				},
+				{
+					"name": "storage.type.byte.q",
+					"match": "\\bByte\\b"
+				},
+				{
+					"name": "storage.type.voidptr.q",
+					"match": "\\bPointer\\b"
+				},
+				{
+					"name": "storage.type.string.q",
+					"match": "\\bText\\b"
+				},
+				{
+					"name": "storage.type.numeric.q",
+					"match": "\\b(Int(8|16|32|64)?|float(32|64)?)\\b"
+				},
+				{
+					"name": "storage.type.none.q",
+					"match": "\\?"
+				}
+			]
+		}
+	}
 }
