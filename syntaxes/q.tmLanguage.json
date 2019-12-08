@@ -109,7 +109,7 @@
 				},
 				{
 					"name": "storage.type.numeric.q",
-					"match": "\\b(Int(8|16|32|64)?|float(32|64)?)\\b"
+					"match": "\\b(Int(8|16|32|64)?|Float(32|64)?)\\b"
 				},
 				{
 					"name": "storage.type.none.q",
