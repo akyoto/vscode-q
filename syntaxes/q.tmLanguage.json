@@ -59,7 +59,7 @@
 			"match": "\\b([a-zA-Z0-9]+)\\(",
 			"captures": {
 				"1": {
-					"name": "entity.name.function"
+					"name": "support.function"
 				}
 			}
 		},
