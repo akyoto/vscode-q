@@ -4,9 +4,14 @@
 	"scopeName": "source.q",
 	"patterns": [
 		{
-			"comment": "Keywords",
+			"comment": "Control flow keywords",
 			"name": "keyword.control.q",
-			"match": "\\b(if|ensure|for|loop|mut|require|return)\\b"
+			"match": "\\b(expect|if|for|loop|return)\\b"
+		},
+		{
+			"comment": "Contract keywords",
+			"name": "keyword.contract.q",
+			"match": "\\bensure\\b"
 		},
 		{
 			"comment": "Built-in functions",
@@ -33,7 +38,7 @@
 			"end": "([0-9a-zA-Z_.]*)",
 			"endCaptures": {
 				"1": {
-					"name": "entity.name.import.q"
+					"name": "entity.name.package.q"
 				}
 			}
 		},
@@ -42,7 +47,7 @@
 			"match": "\\b([a-zA-Z0-9]+)\\.([a-zA-Z0-9]+)\\b",
 			"captures": {
 				"1": {
-					"name": "entity.name.import.q"
+					"name": "entity.name.package.q"
 				},
 				"2": {
 					"name": "entity.name.function"
@@ -55,6 +60,36 @@
 			"captures": {
 				"1": {
 					"name": "entity.name.function"
+				}
+			}
+		},
+		{
+			"comment": "Function return types",
+			"match": "\\)\\s*->(.*?)\\s*{",
+			"captures": {
+				"1": {
+					"name": "meta.return-type.q"
+				}
+			}
+		},
+		{
+			"comment": "Assignment of new variables",
+			"match": "\\b([a-zA-Z0-9]+)\\s*:=",
+			"captures": {
+				"1": {
+					"name": "variable.q"
+				}
+			}
+		},
+		{
+			"comment": "Assignment of mut variables",
+			"match": "\\b(mut)\\s+([a-zA-Z0-9]+)\\s*=",
+			"captures": {
+				"1": {
+					"name": "keyword.q"
+				},
+				"2": {
+					"name": "variable.q"
 				}
 			}
 		},
