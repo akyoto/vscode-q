@@ -1,0 +1,25 @@
+{
+	"name": "vscode-q",
+	"displayName": "vscode-q",
+	"description": "Q programming language support.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.101.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "q",
+			"aliases": ["Q", "q"],
+			"extensions": [".q"],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "q",
+			"scopeName": "source.q",
+			"path": "./syntaxes/q.tmLanguage.json"
+		}]
+	}
+}
