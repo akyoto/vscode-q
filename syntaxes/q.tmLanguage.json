@@ -6,13 +6,13 @@
 			"include": "#comments"
 		},
 		{
+			"include": "#keywords"
+		},
+		{
 			"include": "#functions"
 		},
 		{
 			"include": "#integers"
-		},
-		{
-			"include": "#keywords"
 		},
 		{
 			"include": "#strings"
